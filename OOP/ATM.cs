@@ -27,11 +27,7 @@ namespace OOP
         public void WithdrawMoney(GoldCard goldCard, double amount) => GoldCard.Withdraw(amount);
         public void WithdrawMoney(PlatinumCard platinumCard, double amount) => PlatinumCard.Withdraw(amount);
         public static void ShowBalance(Card card) => Console.WriteLine("Your current amount is " + card.Balance);
-        public static void ShowBalance(GoldCard card) => Console.WriteLine("Your current amount is " + card.Balance);
-        public static void ShowBalance(PlatinumCard card) => Console.WriteLine("Your current amount is " + card.Balance);
         public static void DisplayBillsByCard(Card card) => card.DisplayCurrentBills();
-        public static void DisplayBillsByCard(GoldCard card) => card.DisplayCurrentBills();
-        public static void DisplayBillsByCard(PlatinumCard card) => card.DisplayCurrentBills();
 
     }
 }

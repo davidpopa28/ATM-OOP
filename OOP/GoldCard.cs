@@ -14,7 +14,8 @@ namespace OOP
         }
         public override void Withdraw(double amount)
         {
-            Balance -= (amount + 1 / 100 * amount);
+
+            Balance = Balance - (amount + (0.1f * amount));
             Console.WriteLine("Please pick up the $" + amount + "!");
         }
     }

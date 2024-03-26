@@ -10,5 +10,6 @@ namespace OOP
     {
         public string CompanyName { get; set; }
         public double Cost { get; set; }
+        public bool IsBillPayed { get; set; }
     }
 }

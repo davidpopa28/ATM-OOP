@@ -18,7 +18,7 @@
         }
         public virtual void Withdraw(double amount)
         {
-            Balance -= (amount + 5 / 100 * amount);
+            Balance -= amount + (0.2f * amount);
             Console.WriteLine("Please pick up the $" + amount + "!");
         }
         public void DisplayCurrentBills()
@@ -27,6 +27,20 @@
             {
                 Console.WriteLine($"{i}.Bill from {Bills[i].CompanyName} that costs {Bills[i].Cost}");
             }
+        }
+        public void DepositMoney(double amount)
+        {
+            Balance += amount;
+            Console.WriteLine($"Thank you for depositing ${amount}!");
+        }
+
+        public void PayForBills()
+        {
+            foreach (var bill in Bills)
+            {
+                Balance -= bill.Cost;
+            }
+            Console.WriteLine("Thank you for paying your bills");
         }
     }
 }
